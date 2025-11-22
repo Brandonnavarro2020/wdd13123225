@@ -1,93 +1,112 @@
-<!-- place.html -->
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Place — W03 Country Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Madrid, Cundinamarca — Travel Guide</title>
+  <meta name="description" content="Explore Madrid, Cundinamarca — highlights, practical tips and current weather.">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/scripts.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <div class="brand">
-      <h1>Mi Lugar</h1>
-      <p class="tag">Un lugar para descubrir</p>
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Madrid, Cundinamarca</h1>
+        <p class="tagline">A practical travel guide</p>
+      </div>
+      <nav class="main-nav" aria-label="Primary">
+        <button id="navToggle" aria-expanded="false" aria-controls="navList">Menu</button>
+        <ul id="navList" class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#highlights">Highlights</a></li>
+          <li><a href="#weather">Weather</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="main-nav" aria-label="Navegación principal">
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#lugares">Lugares</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
-    <!-- Hero responsivo usando picture y WebP -->
-    <section class="hero" aria-label="Imagen hero">
+    <section class="hero" aria-label="Hero image">
       <picture>
-        <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
-        <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
-        <img src="images/hero-small.webp" alt="Panorámica del lugar" loading="lazy">
+        <source srcset="images/hero-large.webp" media="(min-width:1000px)">
+        <source srcset="images/hero-medium.webp" media="(min-width:600px)">
+        <img src="images/hero-small.webp" alt="Panoramic view of Madrid, Cundinamarca" loading="lazy">
       </picture>
+      <div class="hero-overlay container">
+        <h2>Discover nature, markets and local flavors</h2>
+        <p class="kicker">Authentic experiences within easy reach of Bogotá</p>
+      </div>
     </section>
 
-    <!-- Grid principal que sigue el wireframe -->
-    <section class="content-grid">
-      <article class="intro" id="sobre">
-        <h2>Sobre el lugar</h2>
-        <p>Descripción breve del país o lugar elegido. Aquí van datos históricos, culturales y razones por las que vale la pena visitar.</p>
-        <p>Consejos rápidos: mejor época para viajar, información sobre transporte y costumbres locales.</p>
+    <section id="about" class="container two-column">
+      <article class="panel">
+        <h3>About Madrid</h3>
+        <p>Madrid, Cundinamarca, is a vibrant municipality known for its fruit markets, nearby natural reserves and friendly local culture. This guide gives practical tips and highlights for visitors.</p>
+        <h4>Quick tips</h4>
+        <ul>
+          <li>Best time to visit: January–March and July–August (dry months).</li>
+          <li>Transport: local buses to surrounding veredas; taxis from the central market.</li>
+          <li>Local customs: greet with a handshake; friendly and informal conversations are common.</li>
+        </ul>
       </article>
 
-      <aside class="weather" aria-labelledby="weather-heading">
-        <h2 id="weather-heading">Weather <span class="visually-hidden">condiciones</span></h2>
+      <aside id="weather" class="panel weather" aria-labelledby="weather-heading">
+        <h3 id="weather-heading">Weather <span class="visually-hidden">current conditions</span></h3>
 
-        <!-- Icono SVG solo visible en móvil -->
         <div class="weather-mobile-icon" aria-hidden="true">
-          <img src="icons/weather-mobile.svg" alt="" width="48" height="48">
+          <img src="icons/weather-mobile.svg" alt="">
         </div>
 
-        <dl class="weather-data">
+        <dl>
           <div>
-            <dt>Temperatura</dt>
+            <dt>Temperature</dt>
             <dd><span id="temp">--</span></dd>
           </div>
           <div>
-            <dt>Viento</dt>
+            <dt>Wind</dt>
             <dd><span id="wind">--</span></dd>
           </div>
           <div>
-            <dt>Sensación térmica</dt>
+            <dt>Wind chill</dt>
             <dd><span id="windchill">--</span></dd>
           </div>
         </dl>
       </aside>
     </section>
 
-    <section class="highlights" id="lugares">
-      <h2>Lugares destacados</h2>
-      <ul class="cards">
+    <section id="highlights" class="container highlights">
+      <h3>Lodgings and Highlights</h3>
+      <ul class="card-grid">
         <li class="card">
-          <h3>Destino 1</h3>
-          <p>Breve descripción del lugar destacado.</p>
+          <h4>Central Market</h4>
+          <p>Fresh fruit, local snacks and a lively atmosphere every morning.</p>
         </li>
         <li class="card">
-          <h3>Destino 2</h3>
-          <p>Breve descripción del lugar destacado.</p>
+          <h4>Chingaza Foothills</h4>
+          <p>Short hikes and birdwatching near protected páramo landscapes.</p>
         </li>
         <li class="card">
-          <h3>Destino 3</h3>
-          <p>Breve descripción del lugar destacado.</p>
+          <h4>Local Cafés</h4>
+          <p>Cafés serving regional coffee and typical pastries.</p>
         </li>
       </ul>
+    </section>
+
+    <section id="contact" class="container panel">
+      <h3>Contact & Resources</h3>
+      <p>For visitor information, use municipal offices or local tourism kiosks. This sample page is for educational purposes.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> · Última modificación: <span id="lastModified"></span></p>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Madrid, Cundinamarca · Last modified: <span id="lastModified"></span></p>
+      <p class="small">Built for WDD131 assignment</p>
+    </div>
   </footer>
 </body>
 </html>
+<!doctype html>
+<meta http-equiv="refresh" content="0; url=place.html">
