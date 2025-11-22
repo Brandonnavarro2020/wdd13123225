@@ -1,0 +1,93 @@
+<!-- place.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Place — W03 Country Page</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/scripts.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Mi Lugar</h1>
+      <p class="tag">Un lugar para descubrir</p>
+    </div>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#lugares">Lugares</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero responsivo usando picture y WebP -->
+    <section class="hero" aria-label="Imagen hero">
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+        <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+        <img src="images/hero-small.webp" alt="Panorámica del lugar" loading="lazy">
+      </picture>
+    </section>
+
+    <!-- Grid principal que sigue el wireframe -->
+    <section class="content-grid">
+      <article class="intro" id="sobre">
+        <h2>Sobre el lugar</h2>
+        <p>Descripción breve del país o lugar elegido. Aquí van datos históricos, culturales y razones por las que vale la pena visitar.</p>
+        <p>Consejos rápidos: mejor época para viajar, información sobre transporte y costumbres locales.</p>
+      </article>
+
+      <aside class="weather" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Weather <span class="visually-hidden">condiciones</span></h2>
+
+        <!-- Icono SVG solo visible en móvil -->
+        <div class="weather-mobile-icon" aria-hidden="true">
+          <img src="icons/weather-mobile.svg" alt="" width="48" height="48">
+        </div>
+
+        <dl class="weather-data">
+          <div>
+            <dt>Temperatura</dt>
+            <dd><span id="temp">--</span></dd>
+          </div>
+          <div>
+            <dt>Viento</dt>
+            <dd><span id="wind">--</span></dd>
+          </div>
+          <div>
+            <dt>Sensación térmica</dt>
+            <dd><span id="windchill">--</span></dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="highlights" id="lugares">
+      <h2>Lugares destacados</h2>
+      <ul class="cards">
+        <li class="card">
+          <h3>Destino 1</h3>
+          <p>Breve descripción del lugar destacado.</p>
+        </li>
+        <li class="card">
+          <h3>Destino 2</h3>
+          <p>Breve descripción del lugar destacado.</p>
+        </li>
+        <li class="card">
+          <h3>Destino 3</h3>
+          <p>Breve descripción del lugar destacado.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> · Última modificación: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
